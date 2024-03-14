@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # import requests
 
 # api_key = '16dc43258ccf9e5450dd23b561fbe83b'
