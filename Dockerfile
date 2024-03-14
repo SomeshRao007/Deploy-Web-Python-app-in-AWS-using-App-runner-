@@ -4,8 +4,9 @@ RUN yum install python39 -y && curl -O https://bootstrap.pypa.io/get-pip.py && p
 # COPY . /app
 # WORKDIR /app
 RUN pip3 install -r requirements.txt
-CMD ["python3", "app.py"]
 EXPOSE 8080
+CMD ["python3", "app.py"]
+
 
 
 # FROM python:3.9-slim
