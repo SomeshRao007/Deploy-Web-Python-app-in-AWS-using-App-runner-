@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 public.ecr.aws/amazonlinux/amazonlinux:latest
+FROM public.ecr.aws/amazonlinux/amazonlinux:latest
 RUN yum install python39 -y && curl -O https://bootstrap.pypa.io/get-pip.py && python3 get-pip.py && yum update -y
 RUN mkdir -p /app
 COPY . /app
