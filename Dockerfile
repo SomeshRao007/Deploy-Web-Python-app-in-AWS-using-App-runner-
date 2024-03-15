@@ -1,6 +1,6 @@
 # FROM public.ecr.aws/amazonlinux/amazonlinux:latest
 FROM --platform=linux/amd64 ubuntu:jammy
-RUN apt install python39 -y && curl -O https://bootstrap.pypa.io/get-pip.py && python3 get-pip.py && apt update -y
+RUN apt install python3.9 -y && curl -O https://bootstrap.pypa.io/get-pip.py && python3 get-pip.py && apt update -y
 RUN mkdir -p /app
 WORKDIR /app
 COPY . /app
