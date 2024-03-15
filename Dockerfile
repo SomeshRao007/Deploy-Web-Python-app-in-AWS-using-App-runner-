@@ -1,8 +1,9 @@
-FROM public.ecr.aws/amazonlinux/amazonlinux:latest
-RUN yum install python39 -y && curl -O https://bootstrap.pypa.io/get-pip.py && python3 get-pip.py && yum update -y
-# RUN mkdir -p /app
-# COPY . /app
-# WORKDIR /app
+# FROM public.ecr.aws/amazonlinux/amazonlinux:latest
+FROM --platform=linux/amd64 ubuntu:jammy
+RUN apt install python39 -y && curl -O https://bootstrap.pypa.io/get-pip.py && python3 get-pip.py && apt update -y
+RUN mkdir -p /app
+WORKDIR /app
+COPY . /app
 RUN pip3 install -r requirements.txt
 EXPOSE 8080
 CMD ["python3", "app.py"]
